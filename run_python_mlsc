@@ -1,0 +1,28 @@
+#!/bin/bash
+
+
+export PATH=/usr/pubsw/packages/python/anaconda3.7/bin:${PATH}
+
+#OV changes to my local copy of the dev version
+export PYTHONPATH="/autofs/space/tiamat_003/users/git/freesurfer/python"
+#export PYTHONPATH="/autofs/space/jalapeno_001/users/olivia/pysurfer"
+export PYTHONPATH=/space/freesurfer/python/linux/tensorflow-gpu:$PYTHONPATH
+export PYTHONPATH=/space/freesurfer/python/linux/freesurfer:$PYTHONPATH
+export LD_LIBRARY_PATH=/space/freesurfer/python/linux/envs/tf-gpu/lib:/usr/pubsw/packages/CUDA/lib64:$LD_LIBRARY_PATH
+export PYTHONSTARTUP=python_startup.py
+export OMP_NUM_THREADS=10
+#OV change to my local copy
+export PYTHONPATH=/space/freesurfer/python/fsmodule/freesurfer/src:$PYTHONPATH
+#export PYTHONPATH=/cluster/visuo/users/olivia/software/python/python3.7/lib/site-packages/voxelmorph/src:$PYTHONPATH
+#export PYTHONPATH=/cluster/visuo/users/olivia/software/python/python3.7/lib/site-packages/voxelmorph-sandbox/src:$PYTHONPATH
+#export PYTHONPATH=/cluster/visuo/users/olivia/software/python/python3.7/lib/site-packages/neurite-sandbox/src:$PYTHONPATH
+export PYTHONPATH="$PYTHONPATH:/cluster/visuo/users/olivia/software/python/toolboxes/neurite-sandbox/"
+export PYTHONPATH="$PYTHONPATH:/cluster/visuo/users/olivia/software/python/toolboxes/neurite/"
+export PYTHONPATH="$PYTHONPATH:/cluster/visuo/users/olivia/software/python/toolboxes/voxelmorph/"
+export PYTHONPATH="$PYTHONPATH:/cluster/visuo/users/olivia/software/python/toolboxes/voxelmorph-sandbox/"
+export PYTHONPATH="$PYTHONPATH:/cluster/visuo/users/olivia/software/python/toolboxes/pystrum/"
+#export PYTHONPATH=/space/freesurfer/python/packages/voxelmorph-sandbox/voxelmorph-affine/src:$PYTHONPATH
+#source /space/freesurfer/python/packages/voxelmorph/setup.sh
+export TF_CPP_MIN_LOG_LEVEL=2
+jupyter notebook --no-browser --port=8890
+
