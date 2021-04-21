@@ -70,7 +70,7 @@ def zero_outliers_image(input_2d, percentiles):
 
 ####********LOSS FUNCTIONS ****######
 #Loss function for input that is masked by a binary mask. 
-#This finction will only evaluate the loss in the masked area.
+#This function will only evaluate the loss in the masked area.
 #For MSE loss
 def masked_MSE_loss(y_true, y_pred):
     mask_value   = 0
